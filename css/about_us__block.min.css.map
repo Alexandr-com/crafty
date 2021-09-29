@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,MAAM,AAAC,CACH,SAAS,CAAE,KAAK,CAChB,MAAM,CAAE,SAAS,CAIpB,AAND,AAGI,MAHE,CAGA,GAAG,AAAC,CACF,KAAK,CAAE,IAAI,CACd",
+    "sources": [
+        "../scss/about_us__block.scss"
+    ],
+    "names": [],
+    "file": "about_us__block.min.css"
+}

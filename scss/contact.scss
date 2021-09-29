@@ -1,0 +1,27 @@
+.contact {
+    background: url(../img/Shape2.png) no-repeat;
+    background-size: cover;
+    text-align: center;
+    & .contact-image {
+        padding-top: 130px;
+        padding-bottom: 35px;
+        @include adaptiv-value(padding-top, 130, 40, 1);
+    }
+    & .contact-text {
+        max-width: 968px;
+        margin: 0 auto;
+    }
+    & .contact-h3__style {
+        text-transform: uppercase;
+        font-size: 26px;
+        color: #909090;
+        padding-bottom: 30px;
+    }
+    & .contact-p__style {
+        font-size: 17px;
+        color: #767676;
+        line-height: 1.5;
+        padding-bottom: 140px;
+        @include adaptiv-value(padding-bottom, 140, 60, 1);
+    }
+}

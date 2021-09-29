@@ -1,0 +1,107 @@
+@media (max-width: 1024px) {
+    .about .about__content,
+    .advantages .advantages__content,
+    .works-container,
+    .contact-text {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media (max-width: 890px) {
+   .advantages__cards-box {
+    display: flex;
+    justify-content: center;
+   }
+   .filter {
+       flex-wrap: wrap;
+       justify-content: center;
+   }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+@media (min-width: 568px) and (max-width: 768px) {
+    .header__inner .link__nav {
+        padding: 10px 14px;
+    }
+}
+@media (max-width: 768px) {
+    .menu-nav__activ {
+        width: 400px;
+    }
+    .contact-form .contact-box .contact-form__input {
+        width: 100%;
+        height: 50px;
+    }
+    .contact-box .box-textarea .contact-form__textarea {
+        padding-top: 15px;
+    }
+}
+@media (max-width: 653px) {
+    .contact-box .contact-form__btn {
+        width: 65%;
+        padding-left: 7px;
+    }
+}
+@media (max-width: 567px) {
+    .header__inner .menu-nav {
+        display: none;
+    }
+}
+@media (min-width: 568px) {
+    .menu-left {
+        display: none;
+    }
+}
+@media (max-width: 568px) {
+    .header__nav {
+        position: relative;
+        overflow-x: hidden;
+    }
+}
+@media (max-width: 467px) {
+    .advantages__cards-box__card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .card__box__text {
+        justify-content: center;
+    }
+    .card__box__images {
+        margin: 10px 0;
+    }
+}
+@media (max-width: 414px) {
+    .header__btn {
+        display: block;
+        margin: 0 auto;
+    }
+    .advantages__cards-box__card {
+        flex-wrap: wrap;
+    }
+    .filter {
+       flex-direction: column;
+       align-items: center;
+    }
+    .contact-form .contact-box {
+        grid-gap: 5vw;
+    }
+    .contact-form .contact-box .contact-form__input {
+        height: 30px;
+    }
+}
+@media (max-width: 360px) {
+    .header__text .header__Sub-text {
+        font-size: 30px;
+    }
+    .header__inner .header__btn {
+        width: 150px;
+        height: 35px;
+    }
+    #carouselExampleCaptions .carousel-indicators button {
+        width: 30px;
+        height: 5px;
+    }
+}

@@ -1,0 +1,57 @@
+//  adaptiv_value  ******************
+
+$maxWidth: 1366;
+$maxWidthContainer: 1166;
+
+@mixin adaptiv-value ($property, $startSize, $minSize, $type) {
+    $addSize: $startSize - $minSize;
+    @if $type == 1 {
+        //Только если меньше контейнера
+        #{$property}: $startSize + px;
+        @media (max-width: #{$maxWidthContainer + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 280px) / #{$maxWidthContainer - 280}));
+        }
+    } @else if $type == 2 {
+        //Только если больше контейнера
+        #{$property}: $startSize + px;
+        @media (min-width: #{$maxWidthContainer + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 280px) / #{$maxWidth - 280}));
+        }
+    } @else {
+        //Всегда
+        #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 280px) / #{$maxWidth - 280}));
+    }
+}
+//**********************************************
+
+@mixin h3_text_style {
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #6e6e6e;
+}
+@mixin p_text_style {
+    font-size: 15px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.73;
+    letter-spacing: normal;
+    text-align: center;
+}
+@mixin h4_text_style {
+    font-size: 24px;
+    color: #343434;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+@mixin text-contact-form {
+    border: 0.5px solid #575757;
+    padding-left: 17px;
+    color: #535353;
+    font-size: 20px;
+    letter-spacing: 5.2px;
+    font-weight: 300;
+    @include adaptiv-value(font-size, 20, 12, 1);
+}

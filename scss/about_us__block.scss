@@ -1,0 +1,36 @@
+.about {
+    max-width: 100%;
+
+    background-color: #f9f9f9;
+}
+
+.about__content {
+    max-width: 1030px;
+    margin: 0 auto;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    @include adaptiv-value(padding-bottom, 65, 15, 1);
+    
+    & .about__text {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    & .about__block-img {
+        max-width: 855px;
+        margin: 0 auto;
+    }
+    & img {
+        width: 100%;
+        margin-bottom: 130px;
+    }
+    & .about-h3__style {
+        @include h3_text_style;
+        margin-bottom: 50px;
+    }
+    & .about-p__style {
+        @include p_text_style;
+        color: #767676;
+    }
+}

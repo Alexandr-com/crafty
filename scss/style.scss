@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+
+@import "nullStyle.scss";
+@import "mixins.scss";
+
+@import "variables.scss";
+
+//**********************************************
+body {
+    max-width: 1366px;
+    margin: 0 auto;
+    font-family: 'OpenSans', sans-serif;
+    background-color: #ffffff;
+}
+.container {
+    width: 100%;
+    max-width: 1166px;
+    margin: 0 auto;
+    @include adaptiv-value(max-width, 1166, 240, 1);
+}
+//**********************************************
+
+//  Блок Header
+
+@import "header_block.scss";
+
+@import "menu__block.scss";
+
+//  Блок About
+
+@import "about_us__block.scss";
+
+//  Блок Advantages (преимущества)
+@import "advantages.scss";
+
+//  Блок Works
+
+@import "works.scss";
+
+//  Подключаем медиа-запросы
+
+@import "media_screen's.scss";
+
+//  Блок Contact
+
+@import "contact.scss";
+
+//  Блок Form
+
+@import "contact-form.scss";
+
+//  Блок Footer
+
+.footer {
+    margin-top: 126px;
+    height: 200px;
+    width: 100%;
+    background-color: #efefef;
+    @include adaptiv-value(margin-top, 126, 20, 1);
+    @include adaptiv-value(height, 200, 100, 1);
+    & .footer-info {
+        margin: 0 auto;
+        max-width: 1170px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    & .footer-text_two {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+.facebook,
+.dribbble,
+.behance {
+    background-image: url(../sprite/sprite_socseti/sprite.png);
+    margin-left: 12px;
+    width: 32px;
+    height: 32px;
+    transition: .2s linear;
+    cursor: pointer;
+}
+.footer {
+    & .footer-icon_socsety {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    & .facebook {
+        background-position: -0 -0;
+        &:hover {
+            background-position: -0 -32px;
+        }
+    }
+    & .dribbble {
+        background-position: -32px 0px;
+        &:hover {
+            background-position: -32px -32px;
+        }
+    }
+    & .behance {
+        background-position: -64px -0px;
+        &:hover {
+            background-position: -64px -32px;
+        }
+    }
+}

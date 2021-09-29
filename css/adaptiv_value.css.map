@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../scss/adaptiv_value.scss"
+    ],
+    "names": [],
+    "file": "adaptiv_value.css"
+}
