@@ -30,6 +30,7 @@ menuBtn_left.addEventListener('click', activeMenu_left);
 function closeMenu() {
     menuNav.classList.remove('menu-nav__activ');
     menuBtn.classList.remove('change');
+    document.querySelector('.menu-left').classList.remove('menu-left__active');
 }
 document.querySelector('html').addEventListener('dblclick', closeMenu);
 document.querySelector('html').addEventListener('touchmove', closeMenu);
