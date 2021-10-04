@@ -1,6 +1,8 @@
-let menuBtn = document.querySelector('.menu__btn');
-let menuNav = document.querySelector('.menu-nav');
-let menuNavActive = document.querySelector('.menu-nav__activ');
+const menuBtn = document.querySelector('.menu__btn');
+const menuNav = document.querySelector('.menu-nav');
+const menuNavLink = document.querySelectorAll('.menu-nav__link');
+const menuLeftLink = document.querySelectorAll('.menu-left__link');
+const menuLeft = document.querySelector('.menu-left');
 
 // Выезжающе меню из кнопки "меню-бургер"
 function activeMenu() {
@@ -25,13 +27,22 @@ function activeMenu_left() {
 menuBtn_left.addEventListener('click', activeMenu_left);
 
 
-// Код для contact-form.scss
+removeMenuLink(menuNavLink);
+removeMenuLink(menuLeftLink);
 
-function closeMenu() {
+function removeMenuLink(menuRemove) {
+    for (let i = 0; i < menuRemove.length; i++) {
+        menuRemove[i].addEventListener('click', () => {
+            menuNav.classList.remove('menu-nav__activ');
+            menuBtn.classList.remove('change');
+            menuLeft.classList.remove('menu-left__active');
+        })
+    }
+}
+
+
+document.addEventListener('scroll', () => {
     menuNav.classList.remove('menu-nav__activ');
     menuBtn.classList.remove('change');
-    document.querySelector('.menu-left').classList.remove('menu-left__active');
-}
-document.querySelector('html').addEventListener('dblclick', closeMenu);
-document.querySelector('html').addEventListener('touchmove', closeMenu);
-window.onscroll = closeMenu;
+    menuLeft.classList.remove('menu-left__active');
+})
